@@ -37,19 +37,30 @@ STRING=(\"([^\"\r\n\\]|\\.)*\")
 "var"            { return SimpleTokenType.Companion.getVAR(); }
 "if"             { return SimpleTokenType.Companion.getIF(); }
 "then"           { return SimpleTokenType.Companion.getTHEN(); }
-"else"           { return SimpleTokenType.Companion.getELSSE(); }
+"else"           { return SimpleTokenType.Companion.getELSE(); }
 "return"         { return SimpleTokenType.Companion.getRETURN(); }
 "while"          { return SimpleTokenType.Companion.getWHILE(); }
 
 {ID}             { return SimpleTokenType.Companion.getIDEN(); }
 
+"+"              { return SimpleTokenType.Companion.getPLUS(); }
+"-"              { return SimpleTokenType.Companion.getMINUS(); }
+"/"              { return SimpleTokenType.Companion.getSLASH(); }
+"*"              { return SimpleTokenType.Companion.getSTAR(); }
+">"              { return SimpleTokenType.Companion.getGREATER(); }
+"<"              { return SimpleTokenType.Companion.getLESS(); }
+">="              { return SimpleTokenType.Companion.getGREATER_EQUAL(); }
+"<="              { return SimpleTokenType.Companion.getLESS_EQUAL(); }
 ";"              { return SimpleTokenType.Companion.getSEMICOLON(); }
 "("              { return SimpleTokenType.Companion.getLPAREN(); }
 ")"              { return SimpleTokenType.Companion.getRPAREN(); }
 "{"              { return SimpleTokenType.Companion.getLBRACE(); }
 "}"              { return SimpleTokenType.Companion.getRBRACE(); }
 ","              { return SimpleTokenType.Companion.getCOMMA(); }
+"!="              { return SimpleTokenType.Companion.getBANG_EQUAL(); }
+"=="              { return SimpleTokenType.Companion.getEQUAL_EQUAL(); }
 "="              { return SimpleTokenType.Companion.getEQ(); }
+
 
 
 [^]           { return TokenType.BAD_CHARACTER; }

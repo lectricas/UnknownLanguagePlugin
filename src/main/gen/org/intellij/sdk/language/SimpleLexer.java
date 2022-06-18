@@ -55,10 +55,10 @@ class SimpleLexer implements FlexLexer {
 
   /* The ZZ_CMAP_A table has 320 entries */
   static final char ZZ_CMAP_A[] = zzUnpackCMap(
-    "\11\0\1\3\1\4\1\10\1\11\1\4\22\0\1\3\1\0\1\6\5\0\1\31\1\32\2\0\1\35\1\2\2"+
-    "\0\12\1\1\0\1\30\1\0\1\36\3\0\32\5\1\0\1\7\4\0\1\17\3\5\1\24\1\12\1\5\1\23"+
-    "\1\21\1\5\1\15\1\25\1\5\1\14\3\5\1\20\1\26\1\22\1\13\1\16\1\27\3\5\1\33\1"+
-    "\0\1\34\7\0\1\10\242\0\2\10\26\0");
+    "\11\0\1\3\1\4\1\10\1\11\1\4\22\0\1\3\1\44\1\6\5\0\1\37\1\40\1\32\1\30\1\43"+
+    "\1\2\1\0\1\31\12\1\1\0\1\36\1\34\1\35\1\33\2\0\32\5\1\0\1\7\4\0\1\17\3\5\1"+
+    "\24\1\12\1\5\1\23\1\21\1\5\1\15\1\25\1\5\1\14\3\5\1\20\1\26\1\22\1\13\1\16"+
+    "\1\27\3\5\1\41\1\0\1\42\7\0\1\10\242\0\2\10\26\0");
 
   /** 
    * Translates DFA states to action switch labels.
@@ -66,13 +66,15 @@ class SimpleLexer implements FlexLexer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\1\1\3\1\4\1\1\7\4"+
-    "\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\0"+
-    "\1\14\1\0\3\4\1\15\4\4\1\16\4\4\1\17"+
-    "\1\4\1\20\1\21\2\4\1\22\1\23";
+    "\1\0\1\1\1\2\1\3\1\4\1\5\1\1\7\5"+
+    "\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15"+
+    "\1\16\1\17\1\20\1\21\1\1\1\0\1\22\1\0"+
+    "\3\5\1\23\3\5\1\24\1\25\1\26\1\27\1\5"+
+    "\1\30\4\5\1\31\1\5\1\32\1\33\2\5\1\34"+
+    "\1\35";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[45];
+    int [] result = new int[55];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -97,15 +99,16 @@ class SimpleLexer implements FlexLexer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\37\0\76\0\76\0\135\0\174\0\233\0\272"+
-    "\0\331\0\370\0\u0117\0\u0136\0\u0155\0\u0174\0\37\0\37"+
-    "\0\37\0\37\0\37\0\37\0\37\0\233\0\37\0\u0193"+
-    "\0\u01b2\0\u01d1\0\u01f0\0\174\0\u020f\0\u022e\0\u024d\0\u026c"+
-    "\0\174\0\u028b\0\u02aa\0\u02c9\0\u02e8\0\174\0\u0307\0\174"+
-    "\0\174\0\u0326\0\u0345\0\174\0\174";
+    "\0\0\0\45\0\112\0\112\0\157\0\224\0\271\0\336"+
+    "\0\u0103\0\u0128\0\u014d\0\u0172\0\u0197\0\u01bc\0\45\0\45"+
+    "\0\45\0\u01e1\0\u0206\0\u022b\0\45\0\45\0\45\0\45"+
+    "\0\45\0\45\0\u0250\0\271\0\45\0\u0275\0\u029a\0\u02bf"+
+    "\0\u02e4\0\224\0\u0309\0\u032e\0\u0353\0\45\0\45\0\45"+
+    "\0\45\0\u0378\0\224\0\u039d\0\u03c2\0\u03e7\0\u040c\0\224"+
+    "\0\u0431\0\224\0\224\0\u0456\0\u047b\0\224\0\224";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[45];
+    int [] result = new int[55];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -131,34 +134,36 @@ class SimpleLexer implements FlexLexer {
     "\1\2\1\3\1\4\2\5\1\6\1\7\2\2\1\5"+
     "\1\10\3\6\1\11\1\6\1\12\1\13\1\14\1\6"+
     "\1\15\2\6\1\16\1\17\1\20\1\21\1\22\1\23"+
-    "\1\24\1\25\40\0\1\3\40\0\2\5\4\0\1\5"+
-    "\26\0\1\6\3\0\1\6\4\0\16\6\7\0\4\26"+
-    "\1\0\1\26\1\27\1\30\27\26\1\0\1\6\3\0"+
-    "\1\6\4\0\1\6\1\31\14\6\10\0\1\6\3\0"+
-    "\1\6\4\0\5\6\1\32\10\6\10\0\1\6\3\0"+
-    "\1\6\4\0\12\6\1\33\3\6\10\0\1\6\3\0"+
-    "\1\6\4\0\1\34\15\6\10\0\1\6\3\0\1\6"+
-    "\4\0\11\6\1\35\4\6\10\0\1\6\3\0\1\6"+
-    "\4\0\13\6\1\36\2\6\10\0\1\6\3\0\1\6"+
-    "\4\0\11\6\1\37\4\6\7\0\4\26\1\0\3\26"+
-    "\2\0\25\26\1\0\1\6\3\0\1\6\4\0\2\6"+
-    "\1\40\13\6\10\0\1\6\3\0\1\6\4\0\6\6"+
-    "\1\41\7\6\10\0\1\6\3\0\1\6\4\0\10\6"+
-    "\1\42\5\6\10\0\1\6\3\0\1\6\4\0\12\6"+
-    "\1\43\3\6\10\0\1\6\3\0\1\6\4\0\14\6"+
-    "\1\44\1\6\10\0\1\6\3\0\1\6\4\0\7\6"+
-    "\1\45\6\6\10\0\1\6\3\0\1\6\4\0\3\6"+
-    "\1\46\12\6\10\0\1\6\3\0\1\6\4\0\1\6"+
-    "\1\47\14\6\10\0\1\6\3\0\1\6\4\0\2\6"+
-    "\1\50\13\6\10\0\1\6\3\0\1\6\4\0\12\6"+
-    "\1\51\3\6\10\0\1\6\3\0\1\6\4\0\13\6"+
-    "\1\52\2\6\10\0\1\6\3\0\1\6\4\0\6\6"+
-    "\1\53\7\6\10\0\1\6\3\0\1\6\4\0\12\6"+
-    "\1\54\3\6\10\0\1\6\3\0\1\6\4\0\2\6"+
-    "\1\55\13\6\7\0";
+    "\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33"+
+    "\46\0\1\3\46\0\2\5\4\0\1\5\34\0\1\6"+
+    "\3\0\1\6\4\0\16\6\15\0\4\34\1\0\1\34"+
+    "\1\35\1\36\35\34\1\0\1\6\3\0\1\6\4\0"+
+    "\1\6\1\37\14\6\16\0\1\6\3\0\1\6\4\0"+
+    "\5\6\1\40\10\6\16\0\1\6\3\0\1\6\4\0"+
+    "\12\6\1\41\3\6\16\0\1\6\3\0\1\6\4\0"+
+    "\1\42\15\6\16\0\1\6\3\0\1\6\4\0\11\6"+
+    "\1\43\4\6\16\0\1\6\3\0\1\6\4\0\13\6"+
+    "\1\44\2\6\16\0\1\6\3\0\1\6\4\0\11\6"+
+    "\1\45\4\6\52\0\1\46\44\0\1\47\44\0\1\50"+
+    "\44\0\1\51\7\0\4\34\1\0\3\34\2\0\33\34"+
+    "\1\0\1\6\3\0\1\6\4\0\2\6\1\52\13\6"+
+    "\16\0\1\6\3\0\1\6\4\0\6\6\1\53\7\6"+
+    "\16\0\1\6\3\0\1\6\4\0\10\6\1\54\5\6"+
+    "\16\0\1\6\3\0\1\6\4\0\12\6\1\55\3\6"+
+    "\16\0\1\6\3\0\1\6\4\0\14\6\1\56\1\6"+
+    "\16\0\1\6\3\0\1\6\4\0\7\6\1\57\6\6"+
+    "\16\0\1\6\3\0\1\6\4\0\3\6\1\60\12\6"+
+    "\16\0\1\6\3\0\1\6\4\0\1\6\1\61\14\6"+
+    "\16\0\1\6\3\0\1\6\4\0\2\6\1\62\13\6"+
+    "\16\0\1\6\3\0\1\6\4\0\12\6\1\63\3\6"+
+    "\16\0\1\6\3\0\1\6\4\0\13\6\1\64\2\6"+
+    "\16\0\1\6\3\0\1\6\4\0\6\6\1\65\7\6"+
+    "\16\0\1\6\3\0\1\6\4\0\12\6\1\66\3\6"+
+    "\16\0\1\6\3\0\1\6\4\0\2\6\1\67\13\6"+
+    "\15\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[868];
+    int [] result = new int[1184];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -196,10 +201,11 @@ class SimpleLexer implements FlexLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\14\1\7\11\1\0\1\11\1\0\25\1";
+    "\1\0\1\11\14\1\3\11\3\1\6\11\1\1\1\0"+
+    "\1\11\1\0\7\1\4\11\16\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[45];
+    int [] result = new int[55];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -516,97 +522,147 @@ class SimpleLexer implements FlexLexer {
             { return TokenType.BAD_CHARACTER;
             } 
             // fall through
-          case 20: break;
+          case 30: break;
           case 2: 
             { return SimpleTokenType.Companion.getINT();
             } 
             // fall through
-          case 21: break;
+          case 31: break;
           case 3: 
+            { return SimpleTokenType.Companion.getMINUS();
+            } 
+            // fall through
+          case 32: break;
+          case 4: 
             { return WHITE_SPACE;
             } 
             // fall through
-          case 22: break;
-          case 4: 
+          case 33: break;
+          case 5: 
             { return SimpleTokenType.Companion.getIDEN();
             } 
             // fall through
-          case 23: break;
-          case 5: 
-            { return SimpleTokenType.Companion.getSEMICOLON();
-            } 
-            // fall through
-          case 24: break;
+          case 34: break;
           case 6: 
-            { return SimpleTokenType.Companion.getLPAREN();
+            { return SimpleTokenType.Companion.getPLUS();
             } 
             // fall through
-          case 25: break;
+          case 35: break;
           case 7: 
-            { return SimpleTokenType.Companion.getRPAREN();
+            { return SimpleTokenType.Companion.getSLASH();
             } 
             // fall through
-          case 26: break;
+          case 36: break;
           case 8: 
-            { return SimpleTokenType.Companion.getLBRACE();
+            { return SimpleTokenType.Companion.getSTAR();
             } 
             // fall through
-          case 27: break;
+          case 37: break;
           case 9: 
-            { return SimpleTokenType.Companion.getRBRACE();
+            { return SimpleTokenType.Companion.getGREATER();
             } 
             // fall through
-          case 28: break;
+          case 38: break;
           case 10: 
-            { return SimpleTokenType.Companion.getCOMMA();
+            { return SimpleTokenType.Companion.getLESS();
             } 
             // fall through
-          case 29: break;
+          case 39: break;
           case 11: 
             { return SimpleTokenType.Companion.getEQ();
             } 
             // fall through
-          case 30: break;
+          case 40: break;
           case 12: 
+            { return SimpleTokenType.Companion.getSEMICOLON();
+            } 
+            // fall through
+          case 41: break;
+          case 13: 
+            { return SimpleTokenType.Companion.getLPAREN();
+            } 
+            // fall through
+          case 42: break;
+          case 14: 
+            { return SimpleTokenType.Companion.getRPAREN();
+            } 
+            // fall through
+          case 43: break;
+          case 15: 
+            { return SimpleTokenType.Companion.getLBRACE();
+            } 
+            // fall through
+          case 44: break;
+          case 16: 
+            { return SimpleTokenType.Companion.getRBRACE();
+            } 
+            // fall through
+          case 45: break;
+          case 17: 
+            { return SimpleTokenType.Companion.getCOMMA();
+            } 
+            // fall through
+          case 46: break;
+          case 18: 
             { return SimpleTokenType.Companion.getSTRING();
             } 
             // fall through
-          case 31: break;
-          case 13: 
+          case 47: break;
+          case 19: 
             { return SimpleTokenType.Companion.getIF();
             } 
             // fall through
-          case 32: break;
-          case 14: 
+          case 48: break;
+          case 20: 
+            { return SimpleTokenType.Companion.getGREATER_EQUAL();
+            } 
+            // fall through
+          case 49: break;
+          case 21: 
+            { return SimpleTokenType.Companion.getLESS_EQUAL();
+            } 
+            // fall through
+          case 50: break;
+          case 22: 
+            { return SimpleTokenType.Companion.getEQUAL_EQUAL();
+            } 
+            // fall through
+          case 51: break;
+          case 23: 
+            { return SimpleTokenType.Companion.getBANG_EQUAL();
+            } 
+            // fall through
+          case 52: break;
+          case 24: 
             { return SimpleTokenType.Companion.getVAR();
             } 
             // fall through
-          case 33: break;
-          case 15: 
+          case 53: break;
+          case 25: 
             { return SimpleTokenType.Companion.getFUNK();
             } 
             // fall through
-          case 34: break;
-          case 16: 
+          case 54: break;
+          case 26: 
             { return SimpleTokenType.Companion.getTHEN();
             } 
             // fall through
-          case 35: break;
-          case 17: 
-            { return SimpleTokenType.Companion.getELSSE();
+          case 55: break;
+          case 27: 
+            { return SimpleTokenType.Companion.getELSE();
             } 
             // fall through
-          case 36: break;
-          case 18: 
+          case 56: break;
+          case 28: 
             { return SimpleTokenType.Companion.getWHILE();
             } 
             // fall through
-          case 37: break;
-          case 19: 
+          case 57: break;
+          case 29: 
             { return SimpleTokenType.Companion.getRETURN();
             } 
             // fall through
-          case 38: break;
+          case 58: break;
           default:
             zzScanError(ZZ_NO_MATCH);
           }

@@ -1,0 +1,10 @@
+funk function1(a, b, c) {
+    while(a != 55 && b != 18) {
+        var a = 12;
+        if (a == 15) then {
+            var m = 1 + 2 < 3;
+        } else {
+            var n = 1 * 2 + 4 > 3;
+        }
+    }
+}

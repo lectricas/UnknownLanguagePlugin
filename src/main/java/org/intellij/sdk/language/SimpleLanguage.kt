@@ -5,10 +5,10 @@ import com.intellij.openapi.fileTypes.LanguageFileType
 import com.intellij.openapi.vfs.VirtualFile
 import java.nio.charset.StandardCharsets
 
-object SimpleLanguage1 : Language("Simple")
+object SimpleLanguage : Language("Simple")
 
 
-object SimpleFileType1 : LanguageFileType(SimpleLanguage1) {
+object SimpleFileType1 : LanguageFileType(SimpleLanguage) {
     override fun getDisplayName() = "Simple"
     override fun getName() = "Simple"
     override fun getDescription() = "Simple"
